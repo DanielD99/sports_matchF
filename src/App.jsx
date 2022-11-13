@@ -19,7 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />}/> 
         <Route path="search" element={<Search />} />
-        <Route path="contact" element={<Contact name={"Owais Dashti"} address={{street: "Apple Blv 6", town:"Lyngby", country: "Denmark"}} />} />
+        <Route path="contact" element={<Contact name={"Daniel"} address={{street: "lyngbygade", town:"Lyngby", country: "Denmark"}} email={"ADOT@movies.dk"} />} />
         <Route path="profile" element={<Profile loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
         <Route path='error' element={<Error errorMsg={errorMsg}/>}/>
         <Route path='*' element={<Error/>}/>
