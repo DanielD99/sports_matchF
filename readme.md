@@ -16,6 +16,3 @@ Backend
     Create databases (locally and on droplet!)
     Configure pom.xml and persictence.xml to match the database and server
     Set up and configure Tomcat
-
-
-based on : https://docs.google.com/document/d/1J0pLlU-9iLoVn_yqt5RnJ_nsQExt_kcajMoJ47wsRN4/edit
