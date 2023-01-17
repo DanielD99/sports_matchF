@@ -12,9 +12,9 @@ function App() {
     setLoggedIn(false);
   };
 
-  const login = async (user, pass) => {
+  const login = async (username, password) => {
     facade
-      .login(user, pass)
+      .login(username, password)
       .then((res) => setLoggedIn(true))
       .catch((err) => {
         if (err.status) {

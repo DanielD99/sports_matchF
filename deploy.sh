@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
- PROJECT_NAME="CA2_frontend"
+ PROJECT_NAME="sports_match
  DROPLET_URL="Danield99.dk"
 #echo -n "please enter the project name as it appears on the server in /var/www/"
 #read -r 

@@ -33,6 +33,10 @@ function apiFacade() {
     return localStorage.getItem("username")
   }
 
+  const getMovie = () => {
+    return 
+  }
+
   const loggedIn = () => {
     const loggedIn = getToken() != null;
     return loggedIn;
@@ -48,7 +52,7 @@ function apiFacade() {
 
   const login = async (user, password) => {
     const options = makeOptions("POST", true, {
-      name: user,
+      username: user,
       password: password,
     });
 
@@ -79,6 +83,15 @@ function apiFacade() {
 
   };
 
+
+  const getAllMatches = async () => {
+    const options = makeOptions("GET",true);
+
+    return await fetch(URL + "/api/match/all", options)
+      .then(handleHttpErrors)
+  };
+
+
   const makeOptions = (method, addToken, body) => {
     var opts = {
       method: method,
@@ -106,6 +119,7 @@ function apiFacade() {
     logout,
     fetchData,
     getUsername,
+    getAllMatches,
   };
 }
 const facade = apiFacade();

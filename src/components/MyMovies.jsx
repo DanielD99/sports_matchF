@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import facade from "../facades/apiFacade";
 import Unauthorized from "./Unauthorized";
 
-const Profile = ({loggedIn, setLoggedIn}) => {
+const MyMovies = ({loggedIn, setLoggedIn}) => {
   const [dataFromServer, setDataFromServer] = useState("Loading...");
 
 
@@ -22,11 +22,10 @@ const Profile = ({loggedIn, setLoggedIn}) => {
     <div>
         <>
         {!loggedIn ? <Unauthorized/> : 
-        <><h1>Profile</h1>
+        <><h1>List Of My Favourite Movies!</h1>
           <h3>Data Received from server:</h3>
-          <h3>Welcome Mr. {dataFromServer?.username}, {dataFromServer?.age}</h3>
-          <h3>With ID: {dataFromServer?.id}</h3>
-          <h3>You're currently signed in as: {dataFromServer?.roles}</h3>
+       
+          {console.log(dataFromServer)}
           </>
         }
         </>
@@ -34,4 +33,4 @@ const Profile = ({loggedIn, setLoggedIn}) => {
   );
 };
 
-export default Profile;
+export default MyMovies;

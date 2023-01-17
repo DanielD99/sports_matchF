@@ -11,10 +11,12 @@ function Header({loggedIn, setErrorMsg, setLoggedIn}) {
             <NavLink className="active" to="/" ><i className="fa fa-fw fa-home"></i> Home</NavLink>
 
             <NavLink to="/search"><i className="fa fa-fw fa-search"></i> Search</NavLink>
-
-            <NavLink to="/contact"><i className="fa fa-fw fa-envelope"></i> Contact</NavLink>
             
             {loggedIn && (<NavLink to="profile"><i className="fa fa-fw fa-id-badge"></i> Profile</NavLink>)}
+
+            {loggedIn && (<NavLink to="allmatches"><i className="fa fa-futbol-o"></i> Matches</NavLink>)}
+
+            <NavLink to="/contact"><i className="fa fa-fw fa-envelope"></i> Contact</NavLink>
 
             {!loggedIn ? (<Login setLoggedIn={setLoggedIn} setErrorMsg={setErrorMsg}  />) :
                 (<div>

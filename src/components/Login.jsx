@@ -15,8 +15,8 @@ const Login = ({ setLoggedIn, setErrorMsg }) => {
     login(loginCredentials.username, loginCredentials.password);
   };
 
-  const login = async (user, pass) => {
-    await facade.login(user, pass)
+  const login = async (username, password) => {
+    await facade.login(username, password)
         .then(res => {
           setLoggedIn(true)
           navigate("/profile")
@@ -37,8 +37,8 @@ const Login = ({ setLoggedIn, setErrorMsg }) => {
   return (
     <div className="login-container">
       <form onChange={onChange}>
-        <input type="text" placeholder="Username" id="username" required />{' '}
-        <input type="password" placeholder="Password" id="password" required />
+        <input type="text" placeholder="username" id="username" required />{' '}
+        <input type="password" placeholder="password" id="password" required />
         <button onClick={performLogin}>Login</button>
       </form>
     </div>

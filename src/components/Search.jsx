@@ -8,7 +8,7 @@ function Search(props) {
     <div>
         <h3>Search</h3>
       <form>
-            <input id='search' type="text" placeholder='Search' ref={inputRef} required/>
+            <input id='search' type="text" placeholder='Search for movie' ref={inputRef} required/>
             <button type="submit" onClick={() => {
                 inputRef.current.focus()
             }}>Search</button>
