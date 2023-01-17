@@ -36,12 +36,13 @@ const AllMatches = () => {
                 <td>{match.judge}</td>
                 <td>{match.type}</td>
                 <td>{match.inDoors == 0 ? "No" : "Yes"}</td>
-                <td>{match.location.address}, 
-                {match.location.city}, 
+                <td>{match.location.address},
+                {match.location.city}, <br />
                 {match.location.weather}
+                <br />
                 </td>
-                <td>{match?.players.map(player => (<>
-                    <p>Player: {player?.id}, name: {player?.name}, phone: {player?.phone}, email: {player?.email}, status: {player?.status}</p>
+                <td>{match?.players.map (player => (<>
+                    <p>Player: {player?.id}, Name: {player?.name}, Phone: {player?.phone}, Email: {player?.email}, Status: {player?.status}</p>
                 </>))}</td>
             </tr>
             
