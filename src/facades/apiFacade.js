@@ -33,9 +33,6 @@ function apiFacade() {
     return localStorage.getItem("username")
   }
 
-  const getMovie = () => {
-    return 
-  }
 
   const loggedIn = () => {
     const loggedIn = getToken() != null;

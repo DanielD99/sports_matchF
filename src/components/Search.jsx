@@ -1,20 +1,29 @@
-import { useRef } from "react"
+import React, { useState } from 'react';
 
-function Search(props) {
-    const inputRef = useRef()
-    console.log(inputRef.current);
-    
+function SearchBar() {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  function handleChange(event) {
+    setSearchTerm(event.target.value);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    // Send the search term to the server or handle it in some other way
+    console.log(`Searching for ${searchTerm}`);
+  }
+
   return (
-    <div>
-        <h3>Search</h3>
-      <form>
-            <input id='search' type="text" placeholder='Search for movie' ref={inputRef} required/>
-            <button type="submit" onClick={() => {
-                inputRef.current.focus()
-            }}>Search</button>
-      </form>
-    </div>
-  )
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="Find matches by PlayerId"
+        value={searchTerm}
+        onChange={handleChange}
+      />
+      <button type="submit">Find match for player!</button>
+    </form>
+  );
 }
 
-export default Search
+export default SearchBar;

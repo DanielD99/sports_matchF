@@ -10,7 +10,7 @@ function Header({loggedIn, setErrorMsg, setLoggedIn}) {
 <nav className="topnav">
             <NavLink className="active" to="/" ><i className="fa fa-fw fa-home"></i> Home</NavLink>
 
-            <NavLink to="/search"><i className="fa fa-fw fa-search"></i> Search</NavLink>
+            <NavLink to="/search"><i className="fa fa-fw fa-search"></i> Search Player</NavLink>
             
             {loggedIn && (<NavLink to="profile"><i className="fa fa-fw fa-id-badge"></i> Profile</NavLink>)}
 

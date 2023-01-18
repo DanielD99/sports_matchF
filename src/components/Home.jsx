@@ -5,7 +5,7 @@ function Home() {
   return (
     <div>
       <h1>Homepage</h1>
-        <Link to="/search"><h3>Find Movie!</h3></Link>
+        <Link to="/allmatches"><h3>Find Match!</h3></Link>
         <Outlet/>
     </div>
   )
